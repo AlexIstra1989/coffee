@@ -9,13 +9,15 @@ const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 const fileinclude = require('gulp-file-include');
 const htmlmin = require('gulp-htmlmin');
-const avif = require('gulp-avif');
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const svgSprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const path = require('path');
+const rename = require('gulp-rename');
+const flatten = require('gulp-flatten');
 
 function html() {
  return src('app/**/*.html')
@@ -64,23 +66,19 @@ function styles() {
 }
 
 function images() {
- return src(['app/images/*.*', '!app/images/*.svg'])
-  .pipe(newer('dist/images'))
-  .pipe(avif({quality: 50}))
-  
-  .pipe(src('app/images/*.*'))
-  .pipe(newer('dist/images'))
-  .pipe(webp())
-  
-  .pipe(src('app/images/*.*'))
-  .pipe(newer('dist/images'))
-  .pipe(imagemin())
-
-  .pipe(dest('dist/images'))
+ return src('app/images/**/*')
+   .pipe(newer('dist/images'))
+   .pipe(imagemin())
+   .pipe(flatten({ includeParents: 1 }))
+   .pipe(dest('dist/images'))
+   .pipe(webp())
+   .pipe(rename({ extname: '.webp' }))
+   .pipe(dest('dist/images'))
+   .pipe(browserSync.stream());
 }
 
 function sprite() {
- return src('app/images/*.svg')
+ return src('app/images/*.*/*.svg')
   .pipe(svgSprite({
    mode: {
     stack: {
@@ -106,7 +104,7 @@ function watching() {
  watch(['app/*.html'], html);
  watch(['app/scss/**/*.scss'], styles);
  watch(['app/js/main.js'], scripts)
- watch(['app/images/src'], images)
+ watch(['app/images/**/*'], images)
  watch(['app/**/*.html'], html).on('change', browserSync.reload);
 }
 
