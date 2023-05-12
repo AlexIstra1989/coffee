@@ -147,18 +147,8 @@
  }
  // .menu__link
  &__link {
-  position: relative; 
   &::before {
-   @include pseudo;
-   width: 0;
-   height: 1px;
-   left: 0;
-   bottom: -5px;
    background-color: $mainColor;
-   transition: width 0.5s ease;
-  }
-  &:hover::before {
-   width: 100%;
   }
   @media (max-width: 991px) {
    font-size: 20px;
