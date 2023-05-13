@@ -5,10 +5,40 @@
  <div class="wrapper">
  @@include('./html/header.html')
   <main class="page"> 
+   <section class="main-block">
+    <div class="main-block__content">
+     <div class="container">
+      <div class="main-block__body">
+       <h1 class="main-block__title">
+        Fresh-Roasted <span>Propellant</span> with a Purpose
+       </h1>
+       <p class="main-block__text">
+        Send your morning soaring while empowering small farmers in Myanmar to make a living growing <span>coffee</span>
+        instead of <span>opium.</span>
+       </p>
+       <div class="main-block__links">
+        <a class="main-block__btn btn" href="#">Shop Collection</a>
+        <a class="main-block__btn btn btn_secondary" href="#">Our WHY</a>
+       </div>
+      </div>
+     </div>   
+    </div>
+    <div class="main-block__slider swiper">
+     <div class="main-block__wrapper swiper-wrapper">
+      <div class="main-block__slide swiper-slide">
+       <img src="images/main-block/image.jpg" alt="#">
+      </div>
+      <div class="main-block__slide swiper-slide">
+       <img src="images/main-block/image.jpg" alt="#">
+      </div>
+     </div>
+    </div>
+   </section>
   </main>
   @@include('./html/footer.html')
  </div>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
  <script src="js/main.min.js"></script>
 </body>
 </html>

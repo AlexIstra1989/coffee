@@ -44,6 +44,17 @@ body {
  }
 }
 
+.btn {
+ background-color: $btnColor;
+ color: $primaryColor;
+ // .btn_secondary
+ &_secondary {
+  color: $mainColor;
+  background-color: $primaryColor;
+  border: 1px solid $mainColor;
+ }
+}
+
 //Animation
 ._anim-show {
  transform: translate(0px, 100%);
