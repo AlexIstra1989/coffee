@@ -1,25 +1,51 @@
 .main-block {
  display: flex;
+ align-items: center;
+ position: relative;
+ &::before {
+  @include pseudo;
+  @include background(url("../../images/logo/main-block-logo.png"));
+  width: 113px;
+  height: 113px;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  z-index: 999;
+  @media (max-width: 1250px) {
+   display: none;
+  }
+ }
+ @media (max-width: 1150px) {
+  display: block;
+  padding-top: 33px;
+ }
  // .main-block__content
  &__content {
   flex: 0 0 100%;
- }
- // .main-block__container
- &__container {
+  @media (max-width: 1150px) {
+   margin-bottom: 33px;
+   text-align: center;
+  }
  }
  // .main-block__body
  &__body {
   width: 40%;
+  @media (max-width: 1150px) {
+   width: 100%;
+  }
  }
  // .main-block__title
  &__title {
   font-weight: 900;
-  font-size: 80px;
-  line-height: 1.2;
+  font-size: 45px;
+  line-height: 0.8;
   text-transform: uppercase;
   margin-bottom: 23px;
   span {
    color: $secondaryColor;
+  }
+  @media (max-width: 490px) {
+   font-size: 36px;
   }
  }
  // .main-block__text
@@ -31,34 +57,39 @@
  }
  // .main-block__links
  &__links {
- }
- // .main-block__btn
- &__btn {
+  display: flex;
+  gap: 20px;
+  @media (max-width: 1150px) {
+   justify-content: center;
+   gap: 13px;
+  }
  }
  // .main-block__slider
  &__slider {
-  //flex: 0 0 36%;
   flex: 0 0 685px;
-  transform: translate(-90%, 0);
- }
- // .main-block__wrapper
- &__wrapper {
+  transform: translate(-100%, 0);
+  @media (max-width: 1150px) {
+   transform: none;
+  }
  }
  // .main-block__slide
  &__slide {
   img {
-   //max-width: 100%;
+   max-width: 100%;
+   width: 100%;
+   max-height: 712px;
+   height: 100%;
+  }
+  @media (max-width: 1250px) {
+   position: relative;
+   &::before {
+    @include pseudo;
+    @include background(url(" ../images/logo/logo-main-second.svg"));
+    width: 85px;
+    height: 85px;
+    right: 20px;
+    top: 35px;
+   } 
   }
  }
-}
-.btn {
- // .btn_secondary
- &_secondary {
- }
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
 }

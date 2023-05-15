@@ -45,13 +45,35 @@ body {
 }
 
 .btn {
+ font-weight: 600;
+ display: inline-flex;
+ justify-content: center;
+ padding: 18px 35px;
  background-color: $btnColor;
  color: $primaryColor;
+ border: 1px solid transparent;
+ height: 100%;
+ transition: all 0.7s;
+ &:hover {
+  background-color: $primaryColor;
+  color: $btnColor;
+  border-color: $btnColor;
+ }
+ @media (max-width: 420px) {
+  padding: 17px 22px;
+ }
  // .btn_secondary
  &_secondary {
+  max-width: 185px;
+  width: 100%;
+  justify-content: center;
   color: $mainColor;
   background-color: $primaryColor;
-  border: 1px solid $mainColor;
+  border-color: $mainColor;
+  @media (max-width: 420px) {
+   max-width: 140px;
+   padding: 17px 22px;
+  }
  }
 }
 
