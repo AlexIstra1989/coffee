@@ -1,0 +1,83 @@
+.outerworldly {
+ // .outerworldly__main
+ &__main {
+  @include background(url("../../images/outerworldly/bg.jpg"));
+  padding: 65px 0;
+  @media (max-width: 768px) {
+   padding: 32px 0;
+  }
+ }
+ // .outerworldly__inner
+ &__inner {
+  max-width: 550px;
+  width: 100%;
+ }
+ // .outerworldly__title
+ &__title {
+  color: $primaryColor;
+  margin-bottom: 14px;
+  span {
+   color: $accentColor;
+  }
+ }
+ // .outerworldly__text
+ &__text {
+  font-size: 20px;
+  line-height: 1.6;
+  color: $primaryColor;
+  @media (max-width: 490px) {
+   font-size: 16px;
+  }
+ }
+}
+//===================================================================================
+.benefits {
+ // .benefits__inner
+ &__inner {
+ }
+ // .benefits__image
+ &__image {
+  position: absolute;
+  object-fit: cover;
+ }
+ // .benefits__box 
+ &__box {
+  max-width: 500px;
+  width: 100%;
+  margin-left: auto;
+ }
+ // .benefits__stats
+ &__stats {
+  padding: 100px 0 70px;
+ }
+ // .benefits__stats-subtitle
+ &__stats-subtitle {
+  margin-bottom: 20px;
+ }
+ // .benefits__stats-text
+ &__stats-text {
+  font-weight: 600;
+  font-style: italic;
+  color: $mainColor;
+  span {
+   color: $secondaryColor;
+  }
+ }
+ // .benefits__mission
+ &__mission {
+  padding: 100px 0 140px;
+  background-color: $secondaryColor;
+ }
+ // .benefits__mission-subtitle
+ &__mission-subtitle {
+  margin-bottom: 20px;
+  color: $primaryColor;
+ }
+ // .benefits__mission-text
+ &__mission-text {
+  font-weight: 600;
+  span {
+   color: $mainColor;
+  }
+ }
+}

@@ -27,6 +27,36 @@ body {
 	}
 }
 
+.title {
+ font-weight: 900;
+ font-size: 72px;
+ line-height: 1;
+ text-transform: uppercase;
+ @media (max-width: 991px) {
+  font-size: 64px;
+ }
+ @media (max-width: 768px) {
+  font-size: 48px;
+ }
+ @media (max-width: 490px) {
+  font-size: 32px;
+ }
+}
+
+.subtitle {
+ font-weight: 900;
+ font-size: 40px;
+ line-height: 1;
+ color: $mainColor;
+ text-transform: uppercase;
+}
+
+.text {
+ font-size: 24px;
+ line-height: 1.3;
+ color: $primaryColor;
+}
+
 .link {
  line-height: 2;
  position: relative; 
