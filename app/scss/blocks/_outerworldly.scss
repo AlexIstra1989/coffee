@@ -34,21 +34,40 @@
 .benefits {
  // .benefits__inner
  &__inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
  }
  // .benefits__image
  &__image {
-  position: absolute;
-  object-fit: cover;
+  img {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   object-fit: cover;
+   @media (max-width: 991px) {
+    position: relative;
+    transform: none;
+    width: 100%;
+   }
+  }
  }
  // .benefits__box 
  &__box {
-  max-width: 500px;
+  max-width: 410px;
   width: 100%;
   margin-left: auto;
+  @media (max-width: 991px) {
+   margin-left: 0;
+   max-width: 100%;
+  }
  }
  // .benefits__stats
  &__stats {
-  padding: 100px 0 70px;
+  padding: 120px 0 70px;
+  @media (max-width: 991px) {
+   padding: 60px 0 50px;
+  }
  }
  // .benefits__stats-subtitle
  &__stats-subtitle {
@@ -65,8 +84,22 @@
  }
  // .benefits__mission
  &__mission {
-  padding: 100px 0 140px;
+  padding: 80px 0 140px;
   background-color: $secondaryColor;
+  @media (max-width: 991px) {
+   padding: 80px 0 50px;
+  }
+  @media (max-width: 768px) {
+   height: 600px;
+   padding-top: 60%;
+   margin-top: -50%;
+  }
+  @media (max-width: 550px) {
+   height: 520px;
+  }
+  @media (max-width: 490px) {
+   height: 450px;
+  }
  }
  // .benefits__mission-subtitle
  &__mission-subtitle {
