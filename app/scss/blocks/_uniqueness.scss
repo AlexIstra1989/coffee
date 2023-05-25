@@ -1,0 +1,31 @@
+.uniqueness {
+ @include background(url("../../images/background/uniqueness.jpg"));
+ padding: 150px 0;
+ @media (max-width: 490px) {
+  padding: 70px 0;
+ }
+ // .uniqueness__inner
+ &__inner {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: $primaryColor;
+ }
+ // .uniqueness__title
+ &__title {
+  font-size: 64px;
+  margin-bottom: 30px;
+   @media (max-width: 490px) {
+    font-size: 32px;
+   }
+ }
+ // .uniqueness__text
+ &__text {
+  span {
+   font-weight: 600;
+   font-style: italic;
+   color: $goldColor;
+  }
+ }
+}
