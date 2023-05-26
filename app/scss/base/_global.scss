@@ -114,6 +114,24 @@ body {
    padding: 17px 22px;
   }
  }
+ // .btn_shop
+ &_shop {
+  max-width: 250px;
+  width: 100%;
+  position: relative;
+  &::after {
+   @include pseudo;
+   @include background(url("../../images/icons/arrow-btn.svg"));
+   width: 33px;
+   height: 17px;
+   right: 10%;
+   top: 50%;
+   transform: translateY(-50%);
+  }
+  &:hover::after {
+   @include background(url("../../images/icons/arrow-btn-hover.svg"));
+  }
+ }
 }
 
 //Animation

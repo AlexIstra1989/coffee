@@ -1,5 +1,8 @@
 .features {
  padding-top: 80px;
+ @media (max-width: 490px) {
+  padding-top: 50px;
+ }
  // .features__top
  &__top {
   margin: 0 auto;
