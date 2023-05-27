@@ -28,3 +28,26 @@ new Swiper ('.testimonials__slider', {
   clickable: true,
  },			
 });
+
+
+//FAQs block title
+// Получаем элемент заголовка по его классу
+var titleElement = document.querySelector('.faqs__title');
+// Получаем текст заголовка
+var titleText = titleElement.innerText;
+// Изменяем последнюю букву на нижний регистр
+var modifiedTitleText = titleText.slice(0, -1) + titleText.slice(-1).toLowerCase();
+// Устанавливаем измененный текст обратно в элемент заголовка
+titleElement.innerText = modifiedTitleText;
+
+
+//Accordion
+var accordionHeaders = document.querySelectorAll('.accordion__top');
+
+accordionHeaders.forEach(function(header) {
+  header.addEventListener('click', function() {
+    this.classList.toggle('active');
+    var accordionContent = this.nextElementSibling;
+    accordionContent.classList.toggle('active');
+  });
+});

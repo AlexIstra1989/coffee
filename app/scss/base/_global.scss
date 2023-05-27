@@ -119,6 +119,7 @@ body {
   max-width: 250px;
   width: 100%;
   position: relative;
+  transition: all 0.7s;
   &::after {
    @include pseudo;
    @include background(url("../../images/icons/arrow-btn.svg"));
