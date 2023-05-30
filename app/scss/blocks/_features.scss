@@ -105,7 +105,7 @@
    position: relative;
    &::before {
     @include pseudo;
-    @include background(url("../../images/icons/features-1.svg"));
+    @include background(url("../images/icons/features-1.svg"));
     width: 36px;
     height: 61px;
     left: -20%;
@@ -124,7 +124,7 @@
    position: relative;
    &::before {
     @include pseudo;
-    @include background(url("../../images/icons/features-2.svg"));
+    @include background(url("../images/icons/features-2.svg"));
     width: 61px;
     height: 61px;
     left: -20%;
@@ -140,7 +140,7 @@
    position: relative;
    &::before {
     @include pseudo;
-    @include background(url("../../images/icons/features-3.svg"));
+    @include background(url("../images/icons/features-3.svg"));
     width: 52px;
     height: 52px;
     left: -20%;

@@ -13,7 +13,7 @@ new Swiper ('.main-block__slider', {
  loop: true,
 
  pagination: {
-  el: '.swiper-pagination',
+  el: '.pagination',
   clickable: true,
  },			
 });

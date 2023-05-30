@@ -1,7 +1,7 @@
 .outerworldly {
  // .outerworldly__main
  &__main {
-  @include background(url("../../images/outerworldly/bg.jpg"));
+  @include background(url("../images/outerworldly/bg.jpg"));
   padding: 65px 0;
   @media (max-width: 768px) {
    padding: 32px 0;

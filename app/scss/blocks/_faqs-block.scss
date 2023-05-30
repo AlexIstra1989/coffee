@@ -31,7 +31,7 @@
   }
   &::after {
    @include pseudo;
-   @include background(url("../../images/icons/arrow-link.svg"));
+   @include background(url("../images/icons/arrow-link.svg"));
    width: 33px;
    height: 17px;
    right: -45px;
@@ -40,7 +40,7 @@
    transition: all 1s ease;
   }
   &:hover::after {
-   @include background(url("../../images/icons/arrow-btn.svg"));
+   @include background(url("../images/icons/arrow-btn.svg"));
   }
  }
 } 
@@ -71,7 +71,7 @@
    span {
     // background-color: red;
     &:before {
-     background-image: url("../../images/icons/minus.png");
+     background-image: url("../images/icons/minus.png");
      width: 16px;
      height: 2px;
      }
@@ -81,7 +81,7 @@
   position: relative; 
   &::before {
    @include pseudo;
-   background-image: url("../../images/icons/plus.png");
+   background-image: url("../images/icons/plus.png");
    width: 16px;
    height: 16px;
    left: 50%;
