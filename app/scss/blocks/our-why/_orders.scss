@@ -1,0 +1,39 @@
+.orders {
+ padding: 50px 0;
+ // .orders__inner
+ &__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 991px) {
+   display: block;
+  }
+ }
+ // .orders__content
+ &__content {
+  flex: 0 1 48.3%;
+  @media (max-width: 991px) {
+   text-align: center;
+  }
+ }
+ // .orders__title
+ &__title {
+  margin-bottom: 20px;
+ }
+ // .orders__text
+ &__text {
+  font-style: italic;
+  color: $mainColor;
+  margin-bottom: 20px;
+  span {
+   color: $secondaryColor;
+  }
+ }
+ // .orders__image
+ &__image {
+  flex: 0 1 50%;
+  img {
+   width: 100%;
+  }
+ }
+}
