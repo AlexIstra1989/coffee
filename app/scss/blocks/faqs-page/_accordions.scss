@@ -1,0 +1,23 @@
+.accordions {
+ background-color: $bgColor;
+ // .accordions__item
+ &__item {
+ }
+ // .accordions__name
+ &__name {
+ }
+ // .accordions__top
+ &__top {
+ }
+ // .accordions__header
+ &__header {
+ }
+ // .accordions__content
+ &__content {
+  display: none;
+  &.active {
+   display: block;
+   background-color: $primaryColor;
+  }
+ }
+}

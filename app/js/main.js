@@ -86,3 +86,13 @@ accordionHeaders.forEach(function(header) {
     accordionContent.classList.toggle('active');
   });
 });
+
+var accordionHeaders = document.querySelectorAll('.accordions__top');
+
+accordionHeaders.forEach(function(header) {
+  header.addEventListener('click', function() {
+    this.classList.toggle('active');
+    var accordionContent = this.nextElementSibling;
+    accordionContent.classList.toggle('active');
+  });
+});
