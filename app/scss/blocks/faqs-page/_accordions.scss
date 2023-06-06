@@ -1,23 +1,87 @@
 .accordions {
  background-color: $bgColor;
- // .accordions__item
- &__item {
+ padding: 50px 0 90px;
+ @media (max-width: 768px) {
+  padding: 30px 0 50px;
+ }
+ // .accordions__items
+ &__items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  &:not(:last-child) {
+   margin-bottom: 50px;
+   @media (max-width: 768px) {
+    margin-bottom: 25px;
+   }
+  }
  }
  // .accordions__name
  &__name {
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+   margin-bottom: 15px;
+  }
  }
  // .accordions__top
  &__top {
- }
- // .accordions__header
- &__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  color: $mainColor;
+  padding: 20px;
+  background-color: $primaryColor;
+  cursor: pointer;
+  &.active {
+   border-bottom-left-radius: 0; 
+   border-bottom-right-radius: 0; 
+   span {
+    &:before {
+     background-image: url("../images/icons/minus.png");
+     width: 16px;
+     height: 2px;
+     }
+    }
+   }
+ span {
+  position: relative; 
+  &::before {
+   @include pseudo;
+   background-image: url("../images/icons/plus.png");
+   width: 16px;
+   height: 16px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   }
+  }
  }
  // .accordions__content
  &__content {
   display: none;
+  font-weight: 300;
+  font-style: italic;
+  color: $mainColor;
+  padding: 0px 20px 20px;
+  text-align: left;
   &.active {
    display: block;
    background-color: $primaryColor;
+  }
+  p {   
+   max-width: 620px;
+   width: 100%;
+  }
+  span {
+   color: $goldColor;
   }
  }
 }
