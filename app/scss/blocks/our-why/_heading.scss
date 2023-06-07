@@ -8,6 +8,10 @@
   background: url("../../../images/background/faqs.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  @media (max-width: 768px) {
+    background-position: 75%;
+  }
  }
  @media (max-width: 991px) {
    padding: 220px 0;
